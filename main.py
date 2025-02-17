@@ -16,10 +16,10 @@ def add_student():
     Id.append(student['id'])
     marks.append(student['marks'])
 def display():
-    print('\n\t=== Student Data ===')
     for i in range(len(Id)):
         search_id = input('Enter ID to search: ')
         if search_id == Id[i]:     
+            https://github.com/login/device/select_accountprint('\n\t=== Student Data ===')
             print(f"\nStudent ID: {Id[i]}")
             print(f"Name: {students[i]}")
             print("Marks:")
