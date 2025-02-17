@@ -39,15 +39,30 @@ def delete_student():
             return
     print(f"Student with ID {delete_id} not found.")
 
+def update_data():
+    update_id = input('Enter ID to update: ')
+    for i in range(len(Id)):
+        if Id[i] == update_id:
+            students[i] = input('Enter new name: ')
+            marks[i] = {
+                'maths': int(input('Enter Maths marks: ')),
+                'science': int(input('Enter Science marks: ')),
+                'english': int(input('Enter English marks: '))
+            }
+            return
+    print(f"Student with ID {update_id} not found.")    
+
 while True:
-    ques  = int(input('Enter 1 to add student, 2 to display, 3 to delete student, 4 to exit: '))
+    ques  = int(input('Enter 1 to add student, 2 to display, 3 to delete student, 4 to update data, 5 to exit: '))
     if ques == 1:
         add_student()
     elif ques == 2:
         display()
     elif ques == 3:
         delete_student()
-    elif ques == 4:
+    elif ques == 4  :
+        update_data()
+    elif ques == 5:
         break       
     else:
         print('Invalid input')
